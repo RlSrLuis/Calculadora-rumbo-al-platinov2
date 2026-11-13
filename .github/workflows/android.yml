@@ -1,11 +1,11 @@
 
-name: Generar APK - Calculadora Rumbo a Platino
+name: Generar APK - Rumbo a Platino
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - 'Proyecto_Android_Calculadora_Rumbo_a_Platino.zip'
+      - 'Proyecto_Android_Calculadora_Rumbo_a_Platino_con_icono.zip'
       - '.github/workflows/android.yml'
 
 jobs:
@@ -37,7 +37,7 @@ jobs:
 
       - name: Descomprimir proyecto
         run: |
-          unzip -o Proyecto_Android_Calculadora_Rumbo_a_Platino.zip -d .
+          unzip -o Proyecto_Android_Calculadora_Rumbo_a_Platino_con_icono.zip -d .
           test -f CalculadoraComisionesAndroid/settings.gradle
           test -f CalculadoraComisionesAndroid/app/build.gradle
 
